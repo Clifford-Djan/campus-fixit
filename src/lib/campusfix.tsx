@@ -50,9 +50,9 @@ export type Request = {
   detail: string;
   reporter: string;
   status: Status;
-  assignee?: string;
+  assignee?: string | undefined;
   createdAt: string;
-  photoName?: string;
+  photoName?: string | undefined;
   comments: Comment[];
   history: { status: Status; at: string }[];
 };
@@ -159,7 +159,7 @@ export type NewRequest = {
   category: string;
   location: string;
   detail: string;
-  photoName?: string;
+  photoName?: string | undefined;
 };
 
 type Ctx = {
